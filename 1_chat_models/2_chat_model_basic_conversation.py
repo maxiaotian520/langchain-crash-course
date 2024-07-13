@@ -25,6 +25,7 @@ print(f"Answer from AI: {result.content}")
 
 # AIMessage:
 #   Message from an AI.
+# Answering the last question will be based on it's former questions and so on. 
 messages = [
     SystemMessage(content="Solve the following math problems"),
     HumanMessage(content="What is 81 divided by 9?"),
