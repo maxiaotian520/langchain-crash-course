@@ -9,7 +9,8 @@ load_dotenv()
 model = ChatOpenAI(model="gpt-4o")
 
 # SystemMessage:
-#   Message for priming AI behavior, usually passed in as the first of a sequenc of input messages.
+#   Message for priming AI behavior, usually passed in as the first of a sequence of input messages.
+#   The SystemMessage sets the broad context for the conversation.
 # HumanMessagse:
 #   Message from a human to the AI model.
 messages = [
