@@ -13,6 +13,15 @@ model = ChatOpenAI(model="gpt-4o")
 #   The SystemMessage sets the broad context for the conversation.
 # HumanMessagse:
 #   Message from a human to the AI model.
+# HumanMessage
+# A message sent from the perspective of a human to the model. For example, "What is the name of the most populous state in the USA?" or "I love programming".
+# AIMessage
+# A message sent from the perspective of the AI that the human is interacting with. For example, "The purpose of model regularization is to prevent overfitting 
+# in machine learning models".
+# SystemMessage
+# A message that sets the objectives for the AI to follow. For example, "You're a helpful assistant". SystemMessages are usually passed in as the first message 
+# in a sequence of input messages. 
+
 messages = [
     SystemMessage(content="Solve the following math problems"),
     HumanMessage(content="What is 81 divided by 9?"),
