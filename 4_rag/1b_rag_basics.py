@@ -3,6 +3,8 @@ import os
 from langchain_community.vectorstores import Chroma
 from langchain_openai import OpenAIEmbeddings
 
+## This part mainly focuses on how users call rag and llm model after the vector database was created  
+
 # Define the persistent directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
 persistent_directory = os.path.join(current_dir, "db", "chroma_db")
