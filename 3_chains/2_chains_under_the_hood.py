@@ -31,3 +31,26 @@ response = chain.invoke({"topic": "lawyers", "joke_count": 3})
 
 # Output
 print(response)
+
+## under the hood
+RunnableSequence:
+.. code-block:: python
+
+    from langchain_core.runnables import RunnableLambda
+
+    def add_one(x: int) -> int:
+        return x + 1
+
+    def mul_two(x: int) -> int:
+        return x * 2
+
+    runnable_1 = RunnableLambda(add_one)
+    runnable_2 = RunnableLambda(mul_two)
+    sequence = runnable_1 | runnable_2
+    # Or equivalently:
+    # sequence = RunnableSequence(first=runnable_1, last=runnable_2)
+    sequence.invoke(1)
+    await sequence.ainvoke(1)
+
+    sequence.batch([1, 2, 3])
+    await sequence.abatch([1, 2, 3])
