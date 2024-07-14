@@ -27,6 +27,7 @@ if not os.path.exists(persistent_directory):
     documents = loader.load()
 
     # Split the document into chunks
+    # here overlap means when cutting some docs, in order to keep its whole meaning, the second chunk are allowed to use repeated sentence from last chunks end.
     text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
     docs = text_splitter.split_documents(documents)
 
