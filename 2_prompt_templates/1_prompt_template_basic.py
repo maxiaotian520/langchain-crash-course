@@ -24,7 +24,8 @@ print("\n----- Prompt with Multiple Placeholders -----\n")
 print(prompt)
 
 
-PART 3: Prompt with System and Human Messages (Using Tuples)
+# PART 3: Prompt with System and Human Messages (Using Tuples)
+# In this way we can pre-define the input type in systemMessage. 
 messages = [
     ("system", "You are a comedian who tells jokes about {topic}."),
     ("human", "Tell me {joke_count} jokes."),
