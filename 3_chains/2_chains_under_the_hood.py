@@ -18,6 +18,7 @@ prompt_template = ChatPromptTemplate.from_messages(
 )
 
 # Create individual runnables (steps in the chain)
+# Here each runnable can be viewed as a task
 format_prompt = RunnableLambda(lambda x: prompt_template.format_prompt(**x))
 invoke_model = RunnableLambda(lambda x: model.invoke(x.to_messages()))
 parse_output = RunnableLambda(lambda x: x.content)
