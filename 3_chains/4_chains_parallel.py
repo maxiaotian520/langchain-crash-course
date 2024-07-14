@@ -62,6 +62,7 @@ cons_branch_chain = (
 )
 
 # Create the combined chain using LangChain Expression Language (LCEL)
+# pay attention, here RunnableParallel running two branches at the same time, and finally two results combined in RunnableLambda
 chain = (
     prompt_template
     | model
